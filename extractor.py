@@ -22,7 +22,7 @@ def clean_data(text):
     ctext = re.sub(r'/', ' ', text)
     ctext = re.sub(r'P( )?a( )?g( )?e( )?\|( )?[0-9a-zA-Z]+( )?(\n)*Harry Potter [a-zA-Z ]+( )?-( )?J.K. Rowling', ' ', ctext)
     ctext = ctext.replace('\n',' ')
-    ctext = ctext.lower()
+    #ctext = ctext.lower()
     ctext = ' '.join(word.strip('"#$%&\'()*+,-/:;<=>?@[\\]^_`{|}~') for word in ctext.split())
     return ctext
 
